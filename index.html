@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparative Table</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+            width: 200px; /* Adjust this value as needed */
+        }
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        th {
+            background-color: #333;
+            font-weight: 700;
+        }
+        tr:nth-child(even) {
+            background-color: #2c2c2c;
+        }
+        tr:nth-child(odd) {
+            background-color: #252525;
+        }
+        th, td {
+            border: 1px solid #444;
+        }
+        tr:hover {
+            background-color: #3a3a3a;
+        }
+        th:hover {
+            background-color: #444;
+        }
+        caption {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.imgur.com/Px7bUKB.png" alt="Logo">
+</header>
+
+<table id="comparativeTable">
+    <caption>Comparative Values Table</caption>
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">Élément</th>
+            <th onclick="sortTable(1)">Valeur en GC</th>
+            <th onclick="sortTable(2)">Équivalent Coins</th>
+            <th onclick="sortTable(3)">Équivalent Tokens</th>
+            <th onclick="sortTable(4)">Équivalent Vote Keys</th>
+            <th onclick="sortTable(5)">Équivalent Prisonner Key</th>
+            <th onclick="sortTable(6)">Équivalent Escapist Key</th>
+            <th onclick="sortTable(7)">Équivalent Lucky Blocks</th>
+            <th onclick="sortTable(8)">Équivalent Netherite Upgrade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1 GC</td>
+            <td>1 GC</td>
+            <td>3,000,000 Coins</td>
+            <td>2,000 Tokens</td>
+            <td>98,461.54 Vote Keys</td>
+            <td>6 Prisonner Keys</td>
+            <td>1.5 Escapist Keys</td>
+            <td>0.3529 Lucky Blocks</td>
+            <td>30 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>3,000,000 Coins</td>
+            <td>1 GC</td>
+            <td>3,000,000 Coins</td>
+            <td>2,000 Tokens</td>
+            <td>64 Vote Keys</td>
+            <td>6 Prisonner Keys</td>
+            <td>1.5 Escapist Keys</td>
+            <td>0.3529 Lucky Blocks</td>
+            <td>30 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>2,000 Tokens</td>
+            <td>1 GC</td>
+            <td>3,000,000 Coins</td>
+            <td>2,000 Tokens</td>
+            <td>64 Vote Keys</td>
+            <td>6 Prisonner Keys</td>
+            <td>1.5 Escapist Keys</td>
+            <td>0.3529 Lucky Blocks</td>
+            <td>30 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>64 Vote Keys</td>
+            <td>0.6515 GC</td>
+            <td>6,500,000 Coins</td>
+            <td>4,250 Tokens</td>
+            <td>64 Vote Keys</td>
+            <td>13 Prisonner Keys</td>
+            <td>3.25 Escapist Keys</td>
+            <td>1 Lucky Block</td>
+            <td>65 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>1 Prisonner Key</td>
+            <td>0.1667 GC</td>
+            <td>500,000 Coins</td>
+            <td>333.33 Tokens</td>
+            <td>9.8461 Vote Keys</td>
+            <td>1 Prisonner Key</td>
+            <td>0.25 Escapist Key</td>
+            <td>0.0549 Lucky Blocks</td>
+            <td>5 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>1 Escapist Key</td>
+            <td>0.6667 GC</td>
+            <td>2,000,000 Coins</td>
+            <td>1,333.33 Tokens</td>
+            <td>32.9231 Vote Keys</td>
+            <td>4 Prisonner Keys</td>
+            <td>1 Escapist Key</td>
+            <td>0.2196 Lucky Blocks</td>
+            <td>20 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>64 Lucky Blocks</td>
+            <td>2.8333 GC</td>
+            <td>8,500,000 Coins</td>
+            <td>5,666.67 Tokens</td>
+            <td>139.9231 Vote Keys</td>
+            <td>17 Prisonner Keys</td>
+            <td>4.25 Escapist Keys</td>
+            <td>64 Lucky Blocks</td>
+            <td>85 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>2,500 Tokens</td>
+            <td>1.3125 GC</td>
+            <td>3,937,500 Coins</td>
+            <td>2,500 Tokens</td>
+            <td>84.6154 Vote Keys</td>
+            <td>7.875 Prisonner Keys</td>
+            <td>1.96875 Escapist Keys</td>
+            <td>0.4922 Lucky Blocks</td>
+            <td>39.375 Netherite Upgrades</td>
+        </tr>
+        <tr>
+            <td>1 Netherite Upgrade</td>
+            <td>0.0333 GC</td>
+            <td>100,000 Coins</td>
+            <td>66.67 Tokens</td>
+            <td>2.1505 Vote Keys</td>
+            <td>0.2 Prisonner Keys</td>
+            <td>0.05 Escapist Key</td>
+            <td>0.0082 Lucky Blocks</td>
+            <td>1 Netherite Upgrade</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    function sortTable(n) {
+        const table = document.getElementById("comparativeTable");
+        let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        switching = true;
+        dir = "asc"; 
+
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                if (dir == "asc") {
+                    if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (parseFloat(x.innerHTML) < parseFloat(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount ++;
+            } else {
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
